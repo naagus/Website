@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Acme Corp</title>
+  <meta name="description" content="We are a software consulting firm that helps companies build and scale great products." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Acme Corp</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+      <div class="container">
+        <p class="section__label">About us</p>
+        <h1 class="about-hero__title">A consulting firm that ships.</h1>
+        <p class="about-hero__body">Acme Corp was founded on the idea that great software consulting is indistinguishable from great engineering. We partner closely with our clients — not as vendors, but as a committed part of the team.</p>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section">
+      <div class="container">
+        <div class="stats">
+          <div>
+            <p class="stat__num">12+</p>
+            <p class="stat__label">Years in business</p>
+          </div>
+          <div>
+            <p class="stat__num">80+</p>
+            <p class="stat__label">Projects delivered</p>
+          </div>
+          <div>
+            <p class="stat__num">40+</p>
+            <p class="stat__label">Clients across industries</p>
+          </div>
+          <div>
+            <p class="stat__num">95%</p>
+            <p class="stat__label">Client retention rate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section">
+      <div class="container">
+        <p class="section__label">Our story</p>
+        <h2 class="section__title">Built by engineers, for builders</h2>
+        <p class="section__body">We started as a small team of engineers who got tired of watching good ideas fail due to poor technical execution. Over the years, we've helped startups find product-market fit, helped enterprises modernize legacy systems, and helped everything in between ship software they're proud of.</p>
+        <p class="section__body mt-16">Our model is simple: small teams, senior talent, real ownership. We don't send junior consultants to learn on your dime.</p>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section">
+      <div class="container">
+        <p class="section__label">How we work</p>
+        <h2 class="section__title">Principles we don't compromise on</h2>
+
+        <div class="values">
+          <div>
+            <h3 class="value__title">Directness</h3>
+            <p class="value__body">We tell you what we think, even when it's not what you want to hear. Honest feedback early is cheaper than silent agreement later.</p>
+          </div>
+          <div>
+            <h3 class="value__title">Ownership</h3>
+            <p class="value__body">We treat your codebase like our own. That means caring about long-term quality, not just closing the ticket.</p>
+          </div>
+          <div>
+            <h3 class="value__title">Simplicity</h3>
+            <p class="value__body">The best solution is usually the simplest one that works. We resist over-engineering and chase clarity instead.</p>
+          </div>
+          <div>
+            <h3 class="value__title">Continuity</h3>
+            <p class="value__body">We build systems and teams that can operate without us — documentation, tests, and knowledge transfer are non-negotiable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section">
+      <div class="container">
+        <p class="section__label">The team</p>
+        <h2 class="section__title">People you'll actually work with</h2>
+        <p class="section__body">Our team is small by design. Every engagement is led by a senior consultant who stays accountable from kickoff to delivery.</p>
+
+        <div class="team">
+          <div class="team-member">
+            <div class="team-member__avatar">JD</div>
+            <p class="team-member__name">Jane Doe</p>
+            <p class="team-member__role">Founder & Principal Consultant</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member__avatar">AS</div>
+            <p class="team-member__name">Alex Smith</p>
+            <p class="team-member__role">Lead Engineer</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member__avatar">MK</div>
+            <p class="team-member__name">Maya Kim</p>
+            <p class="team-member__role">Software Architect</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member__avatar">RP</div>
+            <p class="team-member__name">Ryan Park</p>
+            <p class="team-member__role">Engineering Lead</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <p class="section__label">Work with us</p>
+        <h2 class="section__title">Sound like a fit?</h2>
+        <p class="section__body">We take on a limited number of engagements at a time. If you're working on something hard, we'd love to hear about it.</p>
+        <div class="mt-24">
+          <a href="contact.html" class="btn btn--filled">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 Acme Corp. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

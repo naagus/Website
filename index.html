@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acme Corp — Software Consulting</title>
+  <meta name="description" content="We help companies design, build, and scale software that matters." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Acme Corp</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero__label">Software Consulting</p>
+        <h1 class="hero__title">We build software that scales with your business.</h1>
+        <p class="hero__sub">Acme Corp helps companies design, develop, and modernize software — from early-stage products to enterprise systems.</p>
+        <div class="hero__cta">
+          <a href="contact.html" class="btn btn--filled">Get in touch</a>
+          <a href="about.html" class="btn btn--outline">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section">
+      <div class="container">
+        <p class="section__label">What we do</p>
+        <h2 class="section__title">Services built around your goals</h2>
+        <p class="section__body">From strategy to shipping, we partner with your team at every stage of the software development lifecycle.</p>
+
+        <div class="services">
+          <div class="service-card">
+            <p class="service-card__num">01</p>
+            <h3 class="service-card__title">Software Architecture</h3>
+            <p class="service-card__body">We design robust, scalable systems tailored to your technical requirements and growth trajectory.</p>
+          </div>
+          <div class="service-card">
+            <p class="service-card__num">02</p>
+            <h3 class="service-card__title">Product Development</h3>
+            <p class="service-card__body">End-to-end development of web and mobile applications, built with modern stacks and best practices.</p>
+          </div>
+          <div class="service-card">
+            <p class="service-card__num">03</p>
+            <h3 class="service-card__title">Technical Strategy</h3>
+            <p class="service-card__body">Fractional CTO support and technology roadmapping to align your engineering with business objectives.</p>
+          </div>
+          <div class="service-card">
+            <p class="service-card__num">04</p>
+            <h3 class="service-card__title">Team Augmentation</h3>
+            <p class="service-card__body">Skilled engineers embedded with your team to accelerate delivery without sacrificing quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Posts -->
+    <section class="section">
+      <div class="container">
+        <p class="section__label">From the blog</p>
+        <h2 class="section__title">Insights on software and consulting</h2>
+
+        <div class="posts">
+          <article class="post-card">
+            <p class="post-card__date">May 8, 2026</p>
+            <h3 class="post-card__title"><a href="blog.html">When to rewrite vs. refactor: a practical guide</a></h3>
+            <p class="post-card__excerpt">The "rewrite from scratch" debate resurfaces in every aging codebase. Here's how we think about it.</p>
+            <span class="post-card__tag">Engineering</span>
+          </article>
+          <article class="post-card">
+            <p class="post-card__date">Apr 22, 2026</p>
+            <h3 class="post-card__title"><a href="blog.html">Why most API designs age poorly</a></h3>
+            <p class="post-card__excerpt">The decisions you defer today become the constraints you regret tomorrow. API design is no exception.</p>
+            <span class="post-card__tag">Architecture</span>
+          </article>
+          <article class="post-card">
+            <p class="post-card__date">Apr 5, 2026</p>
+            <h3 class="post-card__title"><a href="blog.html">The hidden cost of technical debt</a></h3>
+            <p class="post-card__excerpt">Technical debt isn't just slower development — it compounds into organizational risk over time.</p>
+            <span class="post-card__tag">Strategy</span>
+          </article>
+        </div>
+
+        <div class="mt-48">
+          <a href="blog.html" class="btn btn--outline">View all posts</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <p class="section__label">Let's talk</p>
+        <h2 class="section__title">Ready to start a project?</h2>
+        <p class="section__body">Tell us what you're building. We'll be straight with you about whether we're a good fit.</p>
+        <div class="mt-24">
+          <a href="contact.html" class="btn btn--filled">Start a conversation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 Acme Corp. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Acme Corp</title>
+  <meta name="description" content="Thoughts on software engineering, architecture, and consulting." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Acme Corp</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <section class="blog-hero">
+      <div class="container">
+        <p class="section__label">Writing</p>
+        <h1 class="blog-hero__title">Blog</h1>
+        <p class="blog-hero__sub">Perspectives on software engineering, architecture, and the craft of consulting.</p>
+      </div>
+    </section>
+
+    <section class="blog-list">
+      <div class="container">
+
+        <article class="blog-item">
+          <p class="blog-item__date">May 8, 2026</p>
+          <div>
+            <h2 class="blog-item__title"><a href="#">When to rewrite vs. refactor: a practical guide</a></h2>
+            <p class="blog-item__excerpt">The "rewrite from scratch" debate resurfaces in every aging codebase. The answer is rarely obvious, but the framework for thinking about it is more consistent than people realize. We break down the signals that point toward each path.</p>
+            <div class="blog-item__tags">
+              <span class="post-card__tag">Engineering</span>
+              <span class="post-card__tag">Architecture</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-item">
+          <p class="blog-item__date">Apr 22, 2026</p>
+          <div>
+            <h2 class="blog-item__title"><a href="#">Why most API designs age poorly</a></h2>
+            <p class="blog-item__excerpt">The decisions you defer today become the constraints you regret tomorrow. API design is no exception — and the mistakes are rarely technical. They're organizational. Here's what we keep seeing and how to avoid it.</p>
+            <div class="blog-item__tags">
+              <span class="post-card__tag">Architecture</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-item">
+          <p class="blog-item__date">Apr 5, 2026</p>
+          <div>
+            <h2 class="blog-item__title"><a href="#">The hidden cost of technical debt</a></h2>
+            <p class="blog-item__excerpt">Technical debt isn't just slower development — it compounds into organizational risk over time. Missed deadlines, engineer burnout, and customer churn are often downstream symptoms. We walk through how to make the case for paying it down.</p>
+            <div class="blog-item__tags">
+              <span class="post-card__tag">Strategy</span>
+              <span class="post-card__tag">Engineering</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-item">
+          <p class="blog-item__date">Mar 18, 2026</p>
+          <div>
+            <h2 class="blog-item__title"><a href="#">Hiring a software consultant: what to look for</a></h2>
+            <p class="blog-item__excerpt">Not all consulting engagements are equal. The difference between a productive partnership and an expensive disappointment often comes down to a few key signals in the early conversations. Here's what we'd look for if we were on the other side of the table.</p>
+            <div class="blog-item__tags">
+              <span class="post-card__tag">Consulting</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-item">
+          <p class="blog-item__date">Feb 27, 2026</p>
+          <div>
+            <h2 class="blog-item__title"><a href="#">Monolith vs. microservices: stop asking the wrong question</a></h2>
+            <p class="blog-item__excerpt">The monolith-vs-microservices debate is almost always a proxy for a more important conversation: how does your organization actually work? Architecture should follow team structure, not the other way around.</p>
+            <div class="blog-item__tags">
+              <span class="post-card__tag">Architecture</span>
+              <span class="post-card__tag">Engineering</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-item">
+          <p class="blog-item__date">Feb 10, 2026</p>
+          <div>
+            <h2 class="blog-item__title"><a href="#">The underrated skill in software consulting: listening</a></h2>
+            <p class="blog-item__excerpt">Most technical problems we encounter are actually communication problems in disguise. The best engineers we've worked with share one trait: they ask more questions than they answer, especially early in an engagement.</p>
+            <div class="blog-item__tags">
+              <span class="post-card__tag">Consulting</span>
+              <span class="post-card__tag">Strategy</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 Acme Corp. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
