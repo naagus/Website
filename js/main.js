@@ -26,15 +26,36 @@ document.querySelectorAll('.nav__links a, .nav__mobile a').forEach(link => {
   }
 });
 
-// Contact form: prevent default and show simple confirmation
+// Contact form: submit to Web3Forms and show confirmation
 const form = document.getElementById('contact-form');
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('.form__submit');
-    btn.textContent = 'Message sent.';
+    btn.textContent = 'Sending…';
     btn.disabled = true;
-    btn.style.opacity = '0.5';
-    btn.style.cursor = 'default';
+
+    const data = new FormData(form);
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const json = await res.json();
+      if (json.success) {
+        btn.textContent = 'Message sent.';
+        btn.style.opacity = '0.5';
+        btn.style.cursor = 'default';
+        form.reset();
+      } else {
+        btn.textContent = 'Send message';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again or email us directly.');
+      }
+    } catch {
+      btn.textContent = 'Send message';
+      btn.disabled = false;
+      alert('Something went wrong. Please try again or email us directly.');
+    }
   });
 }

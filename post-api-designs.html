@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why most API designs age poorly — Mindgenie Inc</title>
+  <meta name="description" content="The decisions you defer today become the constraints you regret tomorrow. API design is no exception." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Mindgenie Inc</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <section class="post-hero">
+      <div class="container">
+        <a href="blog.html" class="post-hero__back">&larr; Back to blog</a>
+        <div class="post-hero__tags">
+          <span class="post-card__tag">Architecture</span>
+        </div>
+        <h1 class="post-hero__title">Why most API designs age poorly</h1>
+        <p class="post-hero__meta">Apr 22, 2026</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="post-body">
+
+        <p>Most API designs are built for today's use cases with tomorrow's requirements as an afterthought. That's not necessarily negligent — it's practical. You ship what you know. But the way that deferred decisions compound over time is underappreciated.</p>
+
+        <h2>The first problem: premature specificity</h2>
+
+        <p>The most common mistake we see is encoding domain assumptions directly into the API surface. Routes named after current entities. Response shapes that mirror current database tables. Endpoints that only make sense given the current organizational structure.</p>
+
+        <p>When those assumptions change — and they always do — the API becomes a liability. You either break clients or maintain a parallel set of endpoints that exist only because you can't delete the old ones.</p>
+
+        <h2>The second problem: missing versioning strategy</h2>
+
+        <p>Versioning an API is uncomfortable because it forces you to acknowledge that the API will change. Many teams skip it, preferring to believe the initial design will hold. It rarely does.</p>
+
+        <p>The teams that handle API evolution best treat versioning as a first-class concern from day one — even if v1 and v2 end up being identical. The scaffolding to run multiple versions simultaneously is much cheaper to set up before you need it than after.</p>
+
+        <h2>The third problem: underdocumented intent</h2>
+
+        <p>The most damaging thing that can happen to an API isn't a breaking change — it's a change made by someone who didn't understand the original intent. When the reasoning behind a design decision isn't captured, the next person to touch it makes decisions in a vacuum.</p>
+
+        <p>Good API documentation isn't just "here's how to call it." It's "here's why it was designed this way, what tradeoffs were made, and what you should know before changing it."</p>
+
+        <h2>What you can do about it</h2>
+
+        <p>Build your API around stable concepts, not current implementations. Think about the operations that will always be true — "create an order," "add a line item" — rather than the exact structure of those entities today. Keep your versioning strategy simple and documented. And write down the decisions you make, not just the interface they produced.</p>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 Mindgenie Inc. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

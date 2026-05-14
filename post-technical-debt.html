@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The hidden cost of technical debt — Mindgenie Inc</title>
+  <meta name="description" content="Technical debt isn't just slower development — it compounds into organizational risk over time." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Mindgenie Inc</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <section class="post-hero">
+      <div class="container">
+        <a href="blog.html" class="post-hero__back">&larr; Back to blog</a>
+        <div class="post-hero__tags">
+          <span class="post-card__tag">Strategy</span>
+          <span class="post-card__tag">Engineering</span>
+        </div>
+        <h1 class="post-hero__title">The hidden cost of technical debt</h1>
+        <p class="post-hero__meta">Apr 5, 2026</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="post-body">
+
+        <p>Everyone knows technical debt slows you down. But the framing of "slower development velocity" undersells how bad it actually gets. Technical debt doesn't just slow things down — it creates a compounding set of organizational problems that are hard to trace back to their root cause.</p>
+
+        <h2>The compounding effect</h2>
+
+        <p>The first cost is the direct one: changes take longer than they should. Code is harder to understand, so engineers spend more time reading before they can write. Tests are sparse or missing, so confidence in changes is low and review cycles are long.</p>
+
+        <p>But the second-order costs are what really hurt:</p>
+
+        <ul>
+          <li><strong>Engineer attrition:</strong> Nobody wants to work in a codebase they're ashamed of. The engineers with the most options leave first.</li>
+          <li><strong>Feature paralysis:</strong> Product teams stop requesting certain improvements because they've been told too many times that "the system can't support that."</li>
+          <li><strong>Customer impact:</strong> Bugs that would have been caught in a well-tested system reach production. Outages happen. Trust erodes.</li>
+        </ul>
+
+        <h2>Why it's hard to address</h2>
+
+        <p>Technical debt is difficult to pay down because it's never urgent — just important. There's always a feature that's more visible, a bug that's more pressing. The debt accumulates in the background until something breaks badly enough to force the conversation.</p>
+
+        <h2>Making the case</h2>
+
+        <p>The way to get buy-in for addressing technical debt is to connect it to business outcomes, not engineering preferences. "The codebase is messy" doesn't move people. "We've had three production incidents in Q4, two of which trace directly to this untested module, and we've lost two engineers who cited code quality in their exit interviews" — that moves people.</p>
+
+        <p>Quantify the cost. Estimate the time lost per sprint to working around known issues. Count the bugs that stem from a specific problem area. Frame the investment as risk reduction, not housekeeping.</p>
+
+        <h2>A sustainable approach</h2>
+
+        <p>We've seen the best results from teams that treat debt reduction as an ongoing practice rather than a periodic project. Allocate a fixed percentage of each sprint to paying down debt. Pick the things that cause the most friction today. Document what you improved and why, so the next team can see the progress.</p>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 Mindgenie Inc. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

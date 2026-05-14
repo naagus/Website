@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monolith vs. microservices: stop asking the wrong question — Mindgenie Inc</title>
+  <meta name="description" content="Architecture should follow team structure, not the other way around." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Mindgenie Inc</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <section class="post-hero">
+      <div class="container">
+        <a href="blog.html" class="post-hero__back">&larr; Back to blog</a>
+        <div class="post-hero__tags">
+          <span class="post-card__tag">Architecture</span>
+          <span class="post-card__tag">Engineering</span>
+        </div>
+        <h1 class="post-hero__title">Monolith vs. microservices: stop asking the wrong question</h1>
+        <p class="post-hero__meta">Feb 27, 2026</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="post-body">
+
+        <p>We've had this conversation dozens of times. A team comes to us with a plan to "move to microservices," and when we ask why, the answer is usually some combination of: Netflix does it, it's what you do at scale, and the monolith is getting messy.</p>
+
+        <p>None of those are good reasons.</p>
+
+        <h2>What the question is actually about</h2>
+
+        <p>The monolith-vs-microservices debate is really a question about how your organization works and how it needs to change. Conway's Law — the observation that a system's architecture tends to mirror the communication structure of the teams that built it — is more useful here than any technical comparison of the two approaches.</p>
+
+        <p>A monolith built by a single, small, aligned team is often superior to microservices in almost every way that matters: simpler to reason about, easier to test, faster to deploy, less failure surface. The moment you start decomposing it into services, you're not just splitting code — you're making decisions about team ownership, service contracts, failure boundaries, and operational complexity.</p>
+
+        <h2>When microservices make sense</h2>
+
+        <p>Microservices earn their complexity when you have genuine team-level independence to support. When you have ten teams, each responsible for a distinct area of the business, and you want those teams to be able to deploy and iterate without coordinating with each other — that's when the overhead starts to pay off.</p>
+
+        <p>The other case is when you have genuinely different scaling requirements across different parts of the system. If your payment processing needs to scale independently of your user authentication, splitting them makes operational sense.</p>
+
+        <h2>The more important question</h2>
+
+        <p>Instead of asking "should we use microservices?", ask: what's the thing we can't do today because of our current architecture? If the answer is "deploy one part of the system without coordinating with everyone else," microservices might help. If the answer is "we have too many bugs," or "our codebase is hard to understand," those are process and quality problems that a new architecture won't solve.</p>
+
+        <p>Architecture follows the problem. Don't impose a solution before you've precisely articulated the problem it solves.</p>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 Mindgenie Inc. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When to rewrite vs. refactor: a practical guide — Mindgenie Inc</title>
+  <meta name="description" content="The rewrite-vs-refactor question comes up in almost every mature codebase. Here's a framework for thinking about it." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Mindgenie Inc</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <section class="post-hero">
+      <div class="container">
+        <a href="blog.html" class="post-hero__back">&larr; Back to blog</a>
+        <div class="post-hero__tags">
+          <span class="post-card__tag">Engineering</span>
+          <span class="post-card__tag">Architecture</span>
+        </div>
+        <h1 class="post-hero__title">When to rewrite vs. refactor: a practical guide</h1>
+        <p class="post-hero__meta">May 8, 2026</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="post-body">
+
+        <p>The rewrite-vs-refactor question comes up in almost every mature codebase. And almost every time, it gets answered emotionally rather than analytically. The engineers who've been fighting the legacy code for three years want to burn it down. The business stakeholders who remember the last rewrite want nothing to do with it.</p>
+
+        <p>The truth is somewhere more nuanced.</p>
+
+        <h2>The case for refactoring</h2>
+
+        <p>Refactoring should be your default. It's lower risk, it keeps the system running, and it forces you to understand the thing you're changing. When the core problem is code quality — unclear abstractions, missing tests, tangled dependencies — refactoring is almost always the right move. You're correcting the <em>how</em> without changing the <em>what</em>.</p>
+
+        <p>A key signal that refactoring is viable: you can still articulate the business logic, even if the code expressing it is a mess. If you can describe what the system should do, you can incrementally change how it does it.</p>
+
+        <h2>When rewriting makes sense</h2>
+
+        <p>Rewrites are justified when the problem is structural, not superficial. Specifically:</p>
+
+        <ul>
+          <li>The underlying data model is fundamentally wrong and impossible to migrate incrementally</li>
+          <li>The original design assumptions no longer hold (e.g., went from single-tenant to multi-tenant)</li>
+          <li>The technology is so far from current capabilities that hiring and maintenance costs outweigh the rewrite risk</li>
+          <li>Performance or scalability requirements cannot be met with the current approach</li>
+        </ul>
+
+        <h2>The hybrid path</h2>
+
+        <p>Most successful "rewrites" we've been part of weren't rewrites at all — they were strangler-fig migrations. New functionality gets built on the new system. Old functionality gets moved over module by module. The legacy system never gets a hard cutover date; it just shrinks until it's gone.</p>
+
+        <p>This approach is slower on paper but almost always faster in practice, because it avoids the big-bang integration risk that kills most rewrites.</p>
+
+        <h2>The question you should be asking</h2>
+
+        <p>Before framing this as rewrite vs. refactor, ask: what specific problem are we solving? If the answer is "the code is hard to understand," that's a refactor problem. If the answer is "we can't build X without rethinking Y," that's a rewrite conversation. The difference matters.</p>
+
+        <p>Architecture decisions made under pressure tend to be regretted later. Take the time to precisely name the problem before picking a solution.</p>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 Mindgenie Inc. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
