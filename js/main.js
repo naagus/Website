@@ -36,6 +36,9 @@ if (form) {
     btn.disabled = true;
 
     const data = new FormData(form);
+    data.append('access_key', '9cdde2a7-7681-409f-bb66-047eab74b2fc');
+    data.append('subject', 'New Contact Form Submission — Mindgenie Inc');
+    data.append('from_name', 'Mindgenie Inc Website');
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
